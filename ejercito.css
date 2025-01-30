@@ -1,0 +1,94 @@
+.header-content .image-container {
+    width: 100%;
+    max-width: 400px; /* Reducido para una imagen más pequeña */
+    display: flex;
+    justify-content: center; /* Centrar la imagen */
+    align-items: center;
+    margin-bottom: 2rem; /* Aumentado el margen inferior */
+}
+
+.header-content .header-image {
+    max-width: 25%;
+    height: auto;
+    border-radius: 0; /* Eliminado el borde redondeado */
+    box-shadow: none; /* Eliminada la sombra */
+}
+
+
+.content {
+    background-color: #0303031a; 
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    background-color: hsl(208, 81%, 17%); /* Azul oscuro */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #0077be; /* Azul oscuro */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header-content .header-image {
+        max-width: 80%; /* Ajustado para móviles */
+    }
+}
+
+#BIENVENIDO {
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#BIENVENIDO::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,0,0,0.8) 0%, rgba(255,165,0,0.6) 50%, rgba(255,255,0,0.4) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: explosion 0.5s ease-out forwards;
+}
+
+#BIENVENIDO span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0);
+    animation: appear 0.5s ease-out 0.3s forwards;
+}
+
+@keyframes explosion {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Rodríguez Madurga - Desarrollo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="desarrollo.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Inicio</a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="ejercito.html">Ejército</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Natacion.html">Natación</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="header-content d-flex flex-column align-items-center justify-content-center">
+                <img src="fotos/desarrollador-multiplataforma.jpg" alt="Desarrollador Multiplataforma" class=".header-image">
+                <h1 id="bienvenida" class="display-2 text-center"></h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+            <div class="content text-center">
+                <h1 class="display-4 mb-3">DESARROLLO MULTIPLATAFORMA</h1>
+                <p class="lead">¡Hola! Estás en la parte más reciente de mi vida, donde me he sumergido en el fascinante mundo del desarrollo de aplicaciones multiplataforma. ¡Prepárate para ver mis proyectos más abajo! 😊</p>
+                <!-- Añade más contenido sobre tu carrera en desarrollo -->
+            </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3 d-flex justify-content-center align-items-center">
+                <a href="https://github.com/PabloRM94" target="_blank" class="mx-2">
+                    <img src="fotos/logos/github-logo.webp" alt="GitHub" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+                <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" class="mx-2">
+                    <img src="fotos/logos/linkedin-logo.webp" alt="LinkedIn" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+                <a href="mailto:pablorodriguezmadurga@gmail.com" class="mx-2">
+                    <img src="fotos/logos/mail-logo.png" alt="Email" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+                <a href="https://wa.me/638285938" target="_blank" class="mx-2">
+                    <img src="fotos/logos/WhatsApp-logo.webp" alt="WhatsApp" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+            </div>
+            <p>&copy; 2024 PRM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function binaryEffect(elementId, finalText, duration = 3000, displayTime = 4000) {
+            const element = document.getElementById(elementId);
+            const finalLength = finalText.length;
+            const iterationDelay = duration / finalLength;
+            let iterations = 0;
+            let isRevealing = true;
+
+            function generateRandomBinary(length) {
+                return Array.from({length}, () => Math.random() > 0.5 ? '1' : '0').join('');
+            }
+
+            function updateText() {
+                if (isRevealing) {
+                    iterations++;
+                } else {
+                    iterations--;
+                }
+
+                let outputText = finalText.split('').map((char, index) => {
+                    if (isRevealing ? index < iterations : index >= iterations) {
+                        return `<strong>${char}</strong>`; // Envolvemos cada carácter revelado en una etiqueta <strong>
+                    }
+                    return Math.random() > 0.5 ? '1' : '0';
+                }).join('');
+
+                element.innerHTML = outputText; // Cambiamos innerText a innerHTML para que se interpreten las etiquetas HTML
+                element.style.color = '#1f9824'; // Usamos un verde más suave
+
+                if (isRevealing && iterations < finalLength) {
+                    setTimeout(updateText, iterationDelay);
+                } else if (isRevealing && iterations === finalLength) {
+                    setTimeout(() => {
+                        isRevealing = false;
+                        updateText();
+                    }, displayTime);
+                } else if (!isRevealing && iterations > 0) {
+                    setTimeout(updateText, iterationDelay);
+                } else {
+                    setTimeout(startEffect, iterationDelay);
+                }
+            }
+
+            function startEffect() {
+                iterations = 0;
+                isRevealing = true;
+                element.style.color = "green";
+                element.innerHTML = generateRandomBinary(finalLength);
+                setTimeout(updateText, iterationDelay);
+            }
+
+            startEffect();
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            binaryEffect('bienvenida', 'BIENVENID@', 3000, 4000);
+        });
+    </script>
+</body>
+</html>

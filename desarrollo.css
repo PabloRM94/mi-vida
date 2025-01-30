@@ -1,0 +1,82 @@
+body {
+    background-color: #ffd893; /* El mismo color que el header */
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+.header-image {
+    width: 100%;
+    max-height: 400px; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    background-color: #0303031a; 
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    padding: 15px 0;
+    margin-bottom: 0; /* Añade esta línea */
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: #ffd893 !important;
+}
+
+header {
+    background-color: #ffd893; 
+    padding: 0; 
+    margin-top: 0; 
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+.content p {
+    text-align: justify; /* Justifica los párrafos dentro del contenido */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.header-image {
+    max-width: 40%;
+    height: auto;
+}
+
+.header-content h1 {
+    max-width: 55%;
+}
+
+.main-content {
+    background-color: #ffd893; 
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

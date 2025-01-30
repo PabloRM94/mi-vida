@@ -1,31 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- incluir booystrap en el proyecto -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Actualizar a Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PabloRM-CV</title>
+    <title>Pablo Rodríguez Madurga - Trayectoria Profesional</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="bg-dark text-white text-center p-3">
-        <img src="Foto-cv.jpeg" alt="Yo" height="200" width="200" >
-        <h1>Pablo Rodríguez Madurga</h1>
-        <a href = "https://github.com/PabloRM94" target = "blank"> Desarrollardor Multiplataforma</a> 
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-primary text-white py-5 position-relative">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1 class="display-3 mb-3" id="animate-title"></h1>
+                    <p class="lead" id="animate-subtitle"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="position-absolute top-0 start-0 m-3">
+            <img src="fotos/foto-coña.JPEG" alt="Pablo Rodríguez Madurga" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover; object-position: center;">
+        </div>
+        
+        <div class="position-absolute top-100 start-50 translate-middle d-flex justify-content-between" style="width: 800px;">
+            <a href="mailto:pablorodriguezmadurga@gmail.com" class="d-inline-block">
+                <img src="fotos/logos/mail-logo.png" alt="Email" class="img-fluid" style="max-width: 80px; height: auto;">
+            </a>
+            <a href="www.linkedin.com/in/pablo-rodríguez-madurga-7a9523142" target="_blank" class="d-inline-block">
+                <img src="fotos/logos/linkedin-logo.webp" alt="LinkedIn" class="img-fluid" style="max-width: 90px; height: auto;">
+            </a>
+            <a href="https://wa.me/638285938"target=_blank class="d-inline-block">
+                <img src="fotos/logos/WhatsApp-logo.webp" alt="WhatsApp" style="max-width: 90px; height: auto;">
+            </a>
+        </div>
     </header>
-    <main class="container">
-        <section class="my-5">
-            <h2>Sobre mí</h2>
-            <p>Soy....</p>
-        </section>
-        <section class="my-5">
-            <h2>Proyectos</h2>
-            <p>esta pagina es mi primer proyecto.</p>
-        </section>
+
+    <main class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-12 mb-5">
+                        <a href="desarrollo.html" class="card-link">
+                            <div class="card hover-effect featured-card text-center">
+                                <div class="row g-0">
+                                    <div class="col-md-6">
+                                        <div class="card-img-wrapper featured-img-wrapper">
+                                            <img src="fotos/desarrollador-multiplataforma.jpg" class="card-img-custom" alt="Desarrollo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body featured-card-body">
+                                            <h5 class="card-title">DESARROLLADOR MULTIPLATAFORMA</h5>
+                                            <p class="card-text texto-justificado">Explora mis proyectos y habilidades en desarrollo. Descubre cómo mi experiencia en múltiples plataformas puede beneficiar a tu proyecto.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <a href="natacion.html" class="card-link">
+                            <div class="card hover-effect featured-card text-center">
+                                <div class="row g-0">
+                                    <div class="col-md-6">
+                                        <div class="card-img-wrapper featured-img-wrapper">
+                                            <img src="fotos/astronauta-nadador.avif" class="card-img-custom" alt="Natación">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body featured-card-body">
+                                            <h5 class="card-title">NATACIÓN</h5>
+                                            <p class="card-text texto-justificado">Sumérgete en la piscina y descubre un mundo de diversión acuática.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <a href="ejercito.html" class="card-link">
+                            <div class="card hover-effect featured-card text-center">
+                                <div class="row g-0">
+                                    <div class="col-md-6">
+                                        <div class="card-img-wrapper featured-img-wrapper">
+                                            <img src="fotos/astronauta-militar.avif" class="card-img-custom" alt="Ejército">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body featured-card-body">
+                                            <h5 class="card-title">EJÉRCITO DE TIERRA</h5>
+                                            <p class="card-text texto-justificado">Conoce mi experiencia en el servicio militar.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer class="bg-dark text-white text-center p-3">
-        <p>Contacto: pablorodriguezmadurga@gmail.com</p>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3 d-flex justify-content-center align-items-center">
+                <a href="https://github.com/PabloRM94" target="_blank" class="mx-2">
+                    <img src="fotos/logos/github-logo.webp" alt="GitHub" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+                <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank" class="mx-2">
+                    <img src="fotos/logos/linkedin-logo.webp" alt="LinkedIn" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+                <a href="mailto:pablorodriguezmadurga@gmail.com" class="mx-2">
+                    <img src="fotos/logos/mail-logo.png" alt="Email" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+                <a href="https://wa.me/638285938" target="_blank" class="mx-2">
+                    <img src="fotos/logos/WhatsApp-logo.webp" alt="WhatsApp" class="img-fluid" style="max-width: 50px; height: auto;">
+                </a>
+            </div>
+            <p>&copy; 2024 PRM. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function typeWriter(elementId, text, speed = 150, loop = true) {
+            const element = document.getElementById(elementId);
+            let i = 0;
+
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (loop) {
+                    setTimeout(() => {
+                        element.innerHTML = '';
+                        i = 0;
+                        type();
+                    }, 2000);
+                }
+            }
+            type();
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            typeWriter('animate-title', 'Pablo Rodríguez Madurga', 150, false);
+            setTimeout(() => {
+                typeWriter('animate-subtitle', 'Desarrollador Multiplataforma', 100, false);
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
