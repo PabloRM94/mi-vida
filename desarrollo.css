@@ -80,3 +80,83 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+/* Estilos para el slider de tecnologías */
+.slider-container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    margin: 40px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(200px * 12); /* Ajustado para 6 imágenes x 2 */
+    animation: scroll 30s linear infinite;
+}
+
+.slide {
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 6)); /* Mitad del ancho total */
+    }
+}
+
+/* Pausar la animación al hacer hover */
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .slide {
+        width: 150px;
+    }
+    
+    .slide img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .slide-track {
+        width: calc(150px * 12);
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-150px * 6));
+        }
+    }
+}
