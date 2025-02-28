@@ -81,7 +81,6 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .card-img-wrapper {
@@ -90,12 +89,6 @@ section {
     position: relative;
 }
 
-/* Estilo específico para la imagen del Ejército */
-.card-img-wrapper img[alt="ejercito-tierra.jpg"] {
-    object-fit: cover;
-    object-position: center 100%; /* Ajusta este valor según sea necesario */
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño de la imagen */
-}
 
 /* efecto para los recuadros */
 .hover-effect {
@@ -110,21 +103,10 @@ section {
 .card-link {
     text-decoration: none;
     color: inherit;
-    display: block;
 }
-
-.card-link:hover {
-    text-decoration: none;
-    color: inherit;
-}
-
 
 .featured-card {
-    background-color: #f8f9fa;
-    border: 2px solid #007bff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    animation: floatCard 4s ease-in-out infinite;
 }
 
 .featured-card:hover {
@@ -145,11 +127,36 @@ section {
 }
 
 .featured-img-wrapper {
-    height: 300px; /* Aumentamos la altura de la imagen */
+    overflow: hidden;
 }
 
-.featured-card-body {
-    padding: 2rem; /* Aumentamos el padding del cuerpo de la tarjeta */
+.card-body {
+    height: 100%;
+}
+
+/* Asegurar que las tarjetas mantengan la misma altura */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    display: flex;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .featured-card .row {
+        flex-direction: column;
+    }
+    
+    .featured-card .col-md-6 {
+        width: 100%;
+    }
+    
+    .card-img-wrapper {
+        height: 200px;
+    }
 }
 
 @keyframes floatCard {

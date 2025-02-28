@@ -1,19 +1,20 @@
 .header-content .image-container {
     width: 100%;
-    max-width: 400px; /* Reducido para una imagen más pequeña */
+    max-width: 600px; /* Aumentado de 400px */
     display: flex;
     justify-content: center; /* Centrar la imagen */
     align-items: center;
     margin-bottom: 2rem; /* Aumentado el margen inferior */
+    padding: 20px; /* Añadido padding para separar la imagen del borde */
+    border-radius: 10px; /* Añadido borde redondeado */
 }
 
 .header-content .header-image {
-    max-width: 25%;
+    max-width: 40%; /* Aumentado de 25% */
     height: auto;
     border-radius: 0; /* Eliminado el borde redondeado */
     box-shadow: none; /* Eliminada la sombra */
 }
-
 
 .content {
     background-color: #0303031a; 
@@ -35,14 +36,17 @@ footer {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .header-content .header-image {
-        max-width: 80%; /* Ajustado para móviles */
+        max-width: 90%; /* Aumentado de 80% */
     }
 }
 
 #BIENVENIDO {
     position: relative;
-    padding: 20px;
+    padding: 40px; /* Aumentado de 20px */
     overflow: hidden;
+    border-radius: 10px; /* Añadido borde redondeado */
+    margin: 20px; /* Añadido margen */
+    font-size: 1.5em; /* Texto más grande */
 }
 
 #BIENVENIDO::before {
@@ -52,7 +56,11 @@ footer {
     left: 50%;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, rgba(255,0,0,0.8) 0%, rgba(255,165,0,0.6) 50%, rgba(255,255,0,0.4) 100%);
+    background: radial-gradient(circle, 
+        rgba(255,200,0,0.8) 0%, /* Amarillo más intenso */
+        rgba(139,69,19,0.6) 50%, /* Marrón */
+        rgba(34,139,34,0.4) 100% /* Verde oscuro */
+    );
     border-radius: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -91,4 +99,18 @@ footer {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Fondo con textura militar*/
+body {
+    background-color: #2b3d1f;
+    background-image: 
+        linear-gradient(30deg, #445c2b 12%, transparent 12.5%, transparent 87%, #445c2b 87.5%, #445c2b),
+        linear-gradient(150deg, #445c2b 12%, transparent 12.5%, transparent 87%, #445c2b 87.5%, #445c2b),
+        linear-gradient(30deg, #445c2b 12%, transparent 12.5%, transparent 87%, #445c2b 87.5%, #445c2b),
+        linear-gradient(150deg, #445c2b 12%, transparent 12.5%, transparent 87%, #445c2b 87.5%, #445c2b),
+        linear-gradient(60deg, #99a684 25%, transparent 25.5%, transparent 75%, #99a684 75%, #99a684);
+    background-size: 80px 140px;
+    margin: 0;
+    min-height: 100vh;
 }
